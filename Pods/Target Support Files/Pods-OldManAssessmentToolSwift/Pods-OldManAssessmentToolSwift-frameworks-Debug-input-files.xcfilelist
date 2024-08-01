@@ -1,0 +1,14 @@
+${PODS_ROOT}/Target Support Files/Pods-OldManAssessmentToolSwift/Pods-OldManAssessmentToolSwift-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire-iOS13.1/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/FLAnimatedImage-iOS13.1/FLAnimatedImage.framework
+${BUILT_PRODUCTS_DIR}/FirebaseCore-iOS13.1/FirebaseCore.framework
+${BUILT_PRODUCTS_DIR}/FirebaseCoreInternal-iOS13.1/FirebaseCoreInternal.framework
+${BUILT_PRODUCTS_DIR}/FirebaseInstallations-iOS13.1/FirebaseInstallations.framework
+${BUILT_PRODUCTS_DIR}/FirebaseMessaging-iOS13.1/FirebaseMessaging.framework
+${BUILT_PRODUCTS_DIR}/FontAwesome.swift-iOS13.1/FontAwesome_swift.framework
+${BUILT_PRODUCTS_DIR}/GoogleDataTransport-iOS13.1/GoogleDataTransport.framework
+${BUILT_PRODUCTS_DIR}/GoogleUtilities-iOS13.1/GoogleUtilities.framework
+${BUILT_PRODUCTS_DIR}/KeychainSwift-iOS13.1/KeychainSwift.framework
+${BUILT_PRODUCTS_DIR}/PromisesObjC-iOS13.1/FBLPromises.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage-iOS13.1/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/nanopb-iOS13.1/nanopb.framework

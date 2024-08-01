@@ -1,0 +1,6 @@
+framework module Pods_OldManAssessmentToolSwift {
+  umbrella header "Pods-OldManAssessmentToolSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
