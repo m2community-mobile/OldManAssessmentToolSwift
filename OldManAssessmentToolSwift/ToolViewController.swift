@@ -251,7 +251,7 @@ class ToolViewController: UIViewController {
             toolComponentViews[3].selectButtons[0].setTitle(bundle?.localizedString(forKey: "3컵 이상" , value: nil, table: nil), for: .normal)
             toolComponentViews[3].selectButtons[1].setTitle(bundle?.localizedString(forKey: "2컵 이하" , value: nil, table: nil), for: .normal)
             
-            toolComponentViews[4].titleLabel.text = bundle?.localizedString(forKey: "말씀 드리는 대로 해 보십시오.\n\"오른손으로 받는다\"\n\n(지시를 끝낸 후에 종이를 건내 준다.\n지시를 반복하거나 옆에서 도와주면 안 됨", value: nil, table: nil)
+            toolComponentViews[4].titleLabel.text = bundle?.localizedString(forKey: "말씀 드리는 대로 해 보십시오.\n\'오른손으로 받는다\'\n\n(지시를 끝낸 후에 종이를 건내 준다.\n지시를 반복하거나 옆에서 도와주면 안 됨)", value: nil, table: nil)
             toolComponentViews[4].selectButtons[0].setTitle(bundle?.localizedString(forKey: "맞음" , value: nil, table: nil), for: .normal)
             toolComponentViews[4].selectButtons[1].setTitle(bundle?.localizedString(forKey: "틀림" , value: nil, table: nil), for: .normal)
             
@@ -259,6 +259,37 @@ class ToolViewController: UIViewController {
             toolComponentViews[5].selectButtons[0].setTitle(bundle?.localizedString(forKey: "보통이거나\n아주 건강하다" , value: nil, table: nil), for: .normal)
             toolComponentViews[5].selectButtons[1].setTitle(bundle?.localizedString(forKey: "건강하지\n못하다" , value: nil, table: nil), for: .normal)
         } else if toolComponentViews[0].titleLabel.text == "도움 없이 혼자서 목욕을 하실 수 있습니까?" {
+            
+            //        } else if MAIN_CONTENT_INFO_KEY.TITLE == "KCSG-Geriatric Score 7\n(KG-7)" {
+            toolComponentViews[0].titleLabel.text = bundle?.localizedString(forKey: "도움 없이 혼자서 목욕을 하실 수 있습니까?", value: nil, table: nil)
+            toolComponentViews[0].selectButtons[0].setTitle(bundle?.localizedString(forKey: "예" , value: nil, table: nil), for: .normal)
+            toolComponentViews[0].selectButtons[1].setTitle(bundle?.localizedString(forKey: "아니오" , value: nil, table: nil), for: .normal)
+            
+            toolComponentViews[1].titleLabel.text = bundle?.localizedString(forKey: "도움 없이 혼자서 계단을 오를 수 있습니까?", value: nil, table: nil)
+            toolComponentViews[1].selectButtons[0].setTitle(bundle?.localizedString(forKey: "예" , value: nil, table: nil), for: .normal)
+            toolComponentViews[1].selectButtons[1].setTitle(bundle?.localizedString(forKey: "아니오" , value: nil, table: nil), for: .normal)
+            
+            toolComponentViews[2].titleLabel.text = bundle?.localizedString(forKey: "필요한 물건은 모두 혼자서 구입할 수 있습니까?", value: nil, table: nil)
+            toolComponentViews[2].selectButtons[0].setTitle(bundle?.localizedString(forKey: "예" , value: nil, table: nil), for: .normal)
+            toolComponentViews[2].selectButtons[1].setTitle(bundle?.localizedString(forKey: "아니오" , value: nil, table: nil), for: .normal)
+            
+            toolComponentViews[3].titleLabel.text = bundle?.localizedString(forKey: "본인의 영양 상태를 스스로 평가하시면 어떻습니까?", value: nil, table: nil)
+            toolComponentViews[3].selectButtons[0].setTitle(bundle?.localizedString(forKey: "양호" , value: nil, table: nil), for: .normal)
+            toolComponentViews[3].selectButtons[1].setTitle(bundle?.localizedString(forKey: "불량" , value: nil, table: nil), for: .normal)
+            
+            toolComponentViews[4].titleLabel.text = bundle?.localizedString(forKey: "현재 매일 3가지 이상의 약물을 복용하고 있습니까?", value: nil, table: nil)
+            toolComponentViews[4].selectButtons[0].setTitle(bundle?.localizedString(forKey: "아니오" , value: nil, table: nil), for: .normal)
+            toolComponentViews[4].selectButtons[1].setTitle(bundle?.localizedString(forKey: "예" , value: nil, table: nil), for: .normal)
+            
+            
+            toolComponentViews[5].titleLabel.text = bundle?.localizedString(forKey: "오늘이 몇 년도 몇 월 며칠 입니까?", value: nil, table: nil)
+            toolComponentViews[5].selectButtons[0].setTitle(bundle?.localizedString(forKey: "맞춤" , value: nil, table: nil), for: .normal)
+            toolComponentViews[5].selectButtons[1].setTitle(bundle?.localizedString(forKey: "못 맞춤" , value: nil, table: nil), for: .normal)
+            
+            toolComponentViews[6].titleLabel.text = bundle?.localizedString(forKey: "활동이나 의욕이 많이 줄었습니까?", value: nil, table: nil)
+            toolComponentViews[6].selectButtons[0].setTitle(bundle?.localizedString(forKey: "아니오" , value: nil, table: nil), for: .normal)
+            toolComponentViews[6].selectButtons[1].setTitle(bundle?.localizedString(forKey: "예" , value: nil, table: nil), for: .normal)
+        } else if toolComponentViews[0].titleLabel.text == "Can you take a shower or bath without help?" {
             
             //        } else if MAIN_CONTENT_INFO_KEY.TITLE == "KCSG-Geriatric Score 7\n(KG-7)" {
             toolComponentViews[0].titleLabel.text = bundle?.localizedString(forKey: "도움 없이 혼자서 목욕을 하실 수 있습니까?", value: nil, table: nil)
@@ -418,7 +449,20 @@ class ToolViewController: UIViewController {
             if selectedIndex == -1 {
                 let offSetY = min(toolComponentView.frame.origin.y, self.scrollView.contentOffset.y)
                 self.scrollView.setContentOffset(CGPoint(x: 0, y: offSetY), animated: true)
-                appDel.showAlert(title: "안내", message: "모든 항목을 입력해 주세요.")
+                
+                
+                if naviLabel.text == "ko" {
+                    appDel.showAlert(title: "안내", message: "모든 항목을 입력해 주세요.")
+                }
+                if naviLabel.text == "en" {
+                    appDel.showAlert(title: "Notice", message: "Please enter all items.")
+                }
+                
+                
+                
+                
+                
+                
                 return
             }
             

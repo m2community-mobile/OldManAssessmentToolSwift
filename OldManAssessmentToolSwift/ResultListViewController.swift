@@ -99,17 +99,50 @@ class ResultListViewController: BaseViewController {
                             if let typeInt = Int(typeString, radix: 10) {
                                 if typeInt == 1 {
                                     
-                                    var risk = "\(score)점 "
-                                    if score < 2 {
-                                        risk = "\(risk) Low risk"
-                                    }else if score >= 2 && score < 4 {
-                                        risk = "\(risk) Medium-low risk"
-                                    }else if score >= 4 && score < 6 {
-                                        risk = "\(risk) Medium-high risk"
-                                    }else{
-                                        risk = "\(risk) High risk"
+                                    
+                                    
+                                    
+                                    if self.naviLabel.text == "ko" {
+                                        var risk = "\(score)점 "
+                                        if score < 2 {
+                                            risk = "\(risk) Low risk"
+                                        }else if score >= 2 && score < 4 {
+                                            risk = "\(risk) Medium-low risk"
+                                        }else if score >= 4 && score < 6 {
+                                            risk = "\(risk) Medium-high risk"
+                                        }else{
+                                            risk = "\(risk) High risk"
+                                        }
+                                        kdataDic["risk"] = risk
+                                        
                                     }
-                                    kdataDic["risk"] = risk
+                                    if self.naviLabel.text == "en" {
+                                        var risk = "\(score)point "
+                                        if score < 2 {
+                                            risk = "\(risk) Low risk"
+                                        }else if score >= 2 && score < 4 {
+                                            risk = "\(risk) Medium-low risk"
+                                        }else if score >= 4 && score < 6 {
+                                            risk = "\(risk) Medium-high risk"
+                                        }else{
+                                            risk = "\(risk) High risk"
+                                        }
+                                        kdataDic["risk"] = risk
+                                    }
+                                    
+                                    
+                                    
+//                                    var risk = "\(score)점 "
+//                                    if score < 2 {
+//                                        risk = "\(risk) Low risk"
+//                                    }else if score >= 2 && score < 4 {
+//                                        risk = "\(risk) Medium-low risk"
+//                                    }else if score >= 4 && score < 6 {
+//                                        risk = "\(risk) Medium-high risk"
+//                                    }else{
+//                                        risk = "\(risk) High risk"
+//                                    }
+//                                    kdataDic["risk"] = risk
                                     
                                     
                                     if let value = dataDic["val1"] as? String {
@@ -133,13 +166,37 @@ class ResultListViewController: BaseViewController {
                                 }
                                 if typeInt == 2 {
                                     
-                                    var risk = "\(score)점 "
-                                    if score <= 5 {
-                                        risk = "\(risk) Score ≤ 5 recommends full geriatric assessment."
-                                    }else{
-                                        risk = "\(risk) Score ≥ 6 is normal."
+                                    
+                                    
+                                    if self.naviLabel.text == "ko" {
+                                        var risk = "\(score)점 "
+                                        if score <= 5 {
+                                            risk = "\(risk) Score ≤ 5 recommends full geriatric assessment."
+                                        }else{
+                                            risk = "\(risk) Score ≥ 6 is normal."
+                                        }
+                                        kdataDic["risk"] = risk
+                                        
                                     }
-                                    kdataDic["risk"] = risk
+                                    if self.naviLabel.text == "en" {
+                                        var risk = "\(score)point "
+                                        if score <= 5 {
+                                            risk = "\(risk) Score ≤ 5 recommends full geriatric assessment."
+                                        }else{
+                                            risk = "\(risk) Score ≥ 6 is normal."
+                                        }
+                                        kdataDic["risk"] = risk
+                                    }
+                                    
+                                    
+                                    
+//                                    var risk = "\(score)점 "
+//                                    if score <= 5 {
+//                                        risk = "\(risk) Score ≤ 5 recommends full geriatric assessment."
+//                                    }else{
+//                                        risk = "\(risk) Score ≥ 6 is normal."
+//                                    }
+//                                    kdataDic["risk"] = risk
                                     
                                     
                                     if let value = dataDic["val1"] as? String {
@@ -433,6 +490,7 @@ extension ResultListViewController : UITableViewDelegate, UITableViewDataSource 
         
         if naviLabel.text == "ko" {
             cell.label1.text = "환자번호:\(UserDefaults.standard.object(forKey: "pa") ?? "") / Tool\(UserDefaults.standard.object(forKey: "ty") ?? "")"
+            
         }
         if naviLabel.text == "en" {
             cell.label1.text = "Patient No.:\(UserDefaults.standard.object(forKey: "pa") ?? "") / Tool\(UserDefaults.standard.object(forKey: "ty") ?? "")"

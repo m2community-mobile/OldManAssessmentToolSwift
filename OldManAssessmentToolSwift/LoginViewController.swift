@@ -217,11 +217,27 @@ class LoginViewController: UIViewController {
         let pw = pwView.textFieldView.textField.text ?? ""
         
         if id.replacingOccurrences(of: " ", with: "") == "" {
-            appDel.showAlert(title: "Notice", message: "아이디를 입력해주세요.")
+//            appDel.showAlert(title: "Notice", message: "아이디를 입력해주세요.")
+            
+            if naviLabel.text == "ko" {
+                appDel.showAlert(title: "Notice", message: "아이디를 입력해주세요.")
+            }
+            if naviLabel.text == "en" {
+                appDel.showAlert(title: "Notice", message: "Please enter your ID.")
+            }
+            
+            
             return
         }
         if pw.replacingOccurrences(of: " ", with: "") == "" {
-            appDel.showAlert(title: "Notice", message: "비밀번호를 입력해주세요.")
+//            appDel.showAlert(title: "Notice", message: "비밀번호를 입력해주세요.")
+            
+            if naviLabel.text == "ko" {
+                            appDel.showAlert(title: "Notice", message: "비밀번호를 입력해주세요.")
+            }
+            if naviLabel.text == "en" {
+                            appDel.showAlert(title: "Notice", message: "Please enter your password.")
+            }
             return
         }
         
@@ -271,8 +287,19 @@ class LoginViewController: UIViewController {
                     }
                 }
             }
-            appDel.showAlert(title: "Notice", message: "로그인에 실패하였습니다.")
+//            appDel.showAlert(title: "Notice", message: "로그인에 실패하였습니다.")
+            
+            
+            if self.naviLabel.text == "ko" {
+                appDel.showAlert(title: "Notice", message: "로그인에 실패하였습니다.")
+            }
+            if self.naviLabel.text == "en" {
+                appDel.showAlert(title: "Notice", message: "Login failed.")
+            }
+            
+            
             return
+            
         })
         
     }

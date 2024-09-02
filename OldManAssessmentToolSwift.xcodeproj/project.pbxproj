@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5881202A2C7FFF7B005143F5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 588120292C7FFF7B005143F5 /* Alamofire */; };
 		5885CF952B96F3FC008A291C /* SelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5885CF942B96F3FC008A291C /* SelectedViewController.swift */; };
 		5885CF9C2B9700AD008A291C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5885CF9F2B9700AD008A291C /* Localizable.strings */; };
 		5885CF9D2B9700AD008A291C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5885CF9F2B9700AD008A291C /* Localizable.strings */; };
@@ -165,7 +166,6 @@
 		7896F3812386789600C3C77C /* NanumSquareExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7896F37D2386789600C3C77C /* NanumSquareExtraBold.ttf */; };
 		7896F3822386789600C3C77C /* NanumSquareBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7896F37E2386789600C3C77C /* NanumSquareBold.ttf */; };
 		7896F3832386789600C3C77C /* NanumSquareLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7896F37F2386789600C3C77C /* NanumSquareLight.ttf */; };
-		7896F3892386790C00C3C77C /* NanumSquareRoundB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7896F3852386790C00C3C77C /* NanumSquareRoundB.ttf */; };
 		7896F38A2386790C00C3C77C /* NanumSquareRoundR.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7896F3862386790C00C3C77C /* NanumSquareRoundR.ttf */; };
 		7896F38B2386790C00C3C77C /* NanumSquareRoundEB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7896F3872386790C00C3C77C /* NanumSquareRoundEB.ttf */; };
 		7896F38C2386790C00C3C77C /* NanumSquareRoundL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7896F3882386790C00C3C77C /* NanumSquareRoundL.ttf */; };
@@ -312,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9B178B9268789693B37DAB5 /* Pods_OldManAssessmentToolSwift.framework in Frameworks */,
+				5881202A2C7FFF7B005143F5 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +638,9 @@
 			dependencies = (
 			);
 			name = OldManAssessmentToolSwift;
+			packageProductDependencies = (
+				588120292C7FFF7B005143F5 /* Alamofire */,
+			);
 			productName = OldManAssessmentToolSwift;
 			productReference = 7896F2A6238674DC00C3C77C /* OldManAssessmentToolSwift.app */;
 			productType = "com.apple.product-type.application";
@@ -718,7 +722,6 @@
 			files = (
 				7896F36E238674DC00C3C77C /* Podfile in Resources */,
 				7896F2B4238674DC00C3C77C /* box_bg1.png in Resources */,
-				7896F3892386790C00C3C77C /* NanumSquareRoundB.ttf in Resources */,
 				7896F2B6238674DC00C3C77C /* box_bg2.png in Resources */,
 				7896F3822386789600C3C77C /* NanumSquareBold.ttf in Resources */,
 				7896F38C2386790C00C3C77C /* NanumSquareRoundL.ttf in Resources */,
@@ -989,14 +992,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 85JQMF8YT8;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEVELOPMENT_TEAM = 33N59Z3268;
 				INFOPLIST_FILE = "OldManAssessmentToolSwift copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.m2community.OldManAssessmentToolSwift;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.OldManAssessmentToolBundle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1009,14 +1014,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 85JQMF8YT8;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEVELOPMENT_TEAM = 33N59Z3268;
 				INFOPLIST_FILE = "OldManAssessmentToolSwift copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.m2community.OldManAssessmentToolSwift;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.OldManAssessmentToolBundle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1151,8 +1158,8 @@
 				CODE_SIGN_ENTITLEMENTS = OldManAssessmentToolSwift/OldManAssessmentToolSwift.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.0.2;
-				DEVELOPMENT_TEAM = 8GTG7652DS;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEVELOPMENT_TEAM = 33N59Z3268;
 				INFOPLIST_FILE = OldManAssessmentToolSwift/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "노인평가도구";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
@@ -1165,8 +1172,8 @@
 					"\"${TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}\"",
 					/usr/lib/swift,
 				);
-				MARKETING_VERSION = 2.0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.m2community.OldManAssessmentTool;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.OldManAssessmentToolBundle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1182,8 +1189,8 @@
 				CODE_SIGN_ENTITLEMENTS = OldManAssessmentToolSwift/OldManAssessmentToolSwift.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.0.2;
-				DEVELOPMENT_TEAM = 8GTG7652DS;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEVELOPMENT_TEAM = 33N59Z3268;
 				INFOPLIST_FILE = OldManAssessmentToolSwift/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "노인평가도구";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
@@ -1196,8 +1203,8 @@
 					"\"${TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}\"",
 					/usr/lib/swift,
 				);
-				MARKETING_VERSION = 2.0.2;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.m2community.OldManAssessmentTool;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.OldManAssessmentToolBundle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -1249,6 +1256,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		588120292C7FFF7B005143F5 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 589A49472B74A1C1003B4D74 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		589A49482B74A1C1003B4D74 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 589A49472B74A1C1003B4D74 /* XCRemoteSwiftPackageReference "Alamofire" */;

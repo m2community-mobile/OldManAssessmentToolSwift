@@ -162,7 +162,7 @@ class SettingViewController: BaseViewController {
      
         
         
-        
+        UserDefaults.standard.setValue("korean", forKey: "setset")
         
         NotificationCenter.default.post(name:NSNotification.Name("ko"), object: UserDefaults.standard.set("ko", forKey: "la"))
         
@@ -173,7 +173,7 @@ class SettingViewController: BaseViewController {
     
     @objc func enBtnAc(_ sender: UIButton) {
         
-        
+        UserDefaults.standard.setValue("english", forKey: "setset")
         
         
         NotificationCenter.default.post(name:NSNotification.Name("en"), object: UserDefaults.standard.set("en", forKey: "la"))
@@ -186,14 +186,16 @@ class SettingViewController: BaseViewController {
     "개인정보 수정",
     "비밀번호 수정",
     "결과보기",
-    "언어선택"
+    "언어선택",
+    "회원탈퇴"
     ]
     
     let enTitles = [
     "Personal Information",
     "Change your password",
     "Result",
-    "Language"
+    "Language",
+    "Withdraw Membership"
     ]
     
 }
@@ -340,7 +342,11 @@ extension SettingViewController : UITableViewDelegate, UITableViewDataSource {
             return
         }
      
-        
+        if indexPath.row == 4 {
+            let nextVC = LoginViewController()
+            self.navigationController?.pushViewController(nextVC, animated: true)
+            return
+        }
         
     }
     

@@ -49,7 +49,8 @@ class ToolComponentView: UIView {
         naviLabel.isHidden = true
         
         titleLabel = UILabel(frame: CGRect(x: 0, y: indexLabel.frame.maxY + 5, width: innerView.frame.size.width, height: 1000))
-        titleLabel.numberOfLines = 0
+//        titleLabel.backgroundColor = .yellow
+        titleLabel.numberOfLines = 10
         titleLabel.textColor = #colorLiteral(red: 0.2588235294, green: 0.3450980392, blue: 0.5019607843, alpha: 1)
         titleLabel.font = UIFont(name: NanumSquareR, size: indexLabel.font.pointSize + 3)
         titleLabel.text = infoDic[MAIN_CONTENT_INFO_KEY.QUESTION] as? String

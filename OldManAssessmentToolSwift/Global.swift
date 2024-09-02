@@ -76,7 +76,7 @@ let MAIN_CONTENT_INFOS = [
                     MAIN_CONTENT_INFO_KEY.ANSWERS : ["\(NSLocalizedString("3컵 이상", comment: ""))","\(NSLocalizedString("2컵 이하", comment: ""))"]
                 ],
                 [
-                    MAIN_CONTENT_INFO_KEY.QUESTION : "\(NSLocalizedString("말씀 드리는 대로 해 보십시오.\n\"오른손으로 받는다\"\n\n(지시를 끝낸 후에 종이를 건내 준다.\n지시를 반복하거나 옆에서 도와주면 안 됨", comment: "")) ",
+                    MAIN_CONTENT_INFO_KEY.QUESTION : "\(NSLocalizedString("말씀 드리는 대로 해 보십시오.\n\"오른손으로 받는다\"\n\n(지시를 끝낸 후에 종이를 건내 준다.\n지시를 반복하거나 옆에서 도와주면 안 됨)", comment: "")) ",
                     MAIN_CONTENT_INFO_KEY.ANSWERS : ["\(NSLocalizedString("맞음", comment: ""))","\(NSLocalizedString("틀림", comment: ""))"]
                 ],
                 [

@@ -67,7 +67,18 @@ class JoinViewController: BaseViewController {
         self.view.addSubview(confirmButton)
         
         let confirmButtonLabel = UILabel(frame: CGRect(x: 0, y: 0, width: confirmButton.frame.size.width, height: confirmButtonHeight))
-        confirmButtonLabel.text = "확인"
+        
+        
+        
+//        confirmButtonLabel.text = "확인"
+        
+        if naviLabel.text == "ko" {
+            confirmButtonLabel.text = "확인"
+        }
+        if naviLabel.text == "en" {
+            confirmButtonLabel.text = "OK"
+        }
+        
         confirmButtonLabel.font = UIFont(name: NanumSquareB, size: confirmButtonLabel.frame.size.height * 0.4)
         confirmButtonLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         confirmButtonLabel.textAlignment = .center
@@ -342,16 +353,48 @@ class JoinViewController: BaseViewController {
         
         var alertMessage = ""
         if isEmpty(textFieldView: idView.textFieldView) {
-            alertMessage = "아이디를 입력해 주세요."
+//            alertMessage = "아이디를 입력해 주세요."
+            
+            if naviLabel.text == "ko" {
+                alertMessage = "아이디를 입력해 주세요."
+            }
+            if naviLabel.text == "en" {
+                alertMessage = "Please enter your ID."
+            }
+            
+            
         }
         else if isEmpty(textFieldView: pwView.textFieldView) {
-            alertMessage = "비밀번호를 입력해 주세요."
+//            alertMessage = "비밀번호를 입력해 주세요."
+            
+            if naviLabel.text == "ko" {
+                alertMessage = "비밀번호를 입력해 주세요."
+            }
+            if naviLabel.text == "en" {
+                alertMessage = "Please enter your password."
+            }
+            
         }
         else if isEmpty(textFieldView: nameView.textFieldView) {
-            alertMessage = "이름을 입력해 주세요."
+//            alertMessage = "이름을 입력해 주세요."
+            
+            if naviLabel.text == "ko" {
+                            alertMessage = "이름을 입력해 주세요."
+            }
+            if naviLabel.text == "en" {
+                            alertMessage = "Please enter your name."
+            }
+            
         }
         else if isEmpty(textFieldView: officeView.textFieldView) {
-            alertMessage = "소속을 입력해 주세요."
+//            alertMessage = "소속을 입력해 주세요."
+            
+            if naviLabel.text == "ko" {
+                alertMessage = "소속을 입력해 주세요."
+            }
+            if naviLabel.text == "en" {
+                alertMessage = "Please enter your affiliation."
+            }
         }
 //        else if isEmpty(textFieldView: phoneView.textFieldView1) ||
 //            isEmpty(textFieldView: phoneView.textFieldView2) ||
@@ -360,22 +403,71 @@ class JoinViewController: BaseViewController {
 //        }
         else if isEmpty(textFieldView: emailView.textFieldView1) ||
             isEmpty(textFieldView: emailView.textFieldView2){
-            alertMessage = "이메일을 입력해 주세요."
+//            alertMessage = "이메일을 입력해 주세요."
+            
+            
+            if naviLabel.text == "ko" {
+                alertMessage = "이메일을 입력해 주세요."
+            }
+            if naviLabel.text == "en" {
+                alertMessage = "Please enter your email."
+            }
+            
         }
         else if !agreeView1.isAgree {
-            alertMessage = "개인정보의 수집 및 이용에 대한 동의에 체크해 주세요."
+//            alertMessage = "개인정보의 수집 및 이용에 대한 동의에 체크해 주세요."
+            
+            
+            if naviLabel.text == "ko" {
+                alertMessage = "개인정보의 수집 및 이용에 대한 동의에 체크해 주세요."
+            }
+            if naviLabel.text == "en" {
+                alertMessage = "Please check if you agree to the collection and use of personal information."
+            }
+            
         }
         else if !agreeView2.isAgree {
-            alertMessage = "개인정보의 취급 위탁에 대한 동의에 체크해 주세요."
+//            alertMessage = "개인정보의 취급 위탁에 대한 동의에 체크해 주세요."
+            
+            
+            if naviLabel.text == "ko" {
+                alertMessage = "개인정보의 취급 위탁에 대한 동의에 체크해 주세요."
+            }
+            if naviLabel.text == "en" {
+                alertMessage = "Please check if you agree to the consignment of personal information handling."
+            }
         }
         else if !agreeView3.isAgree {
-            alertMessage = "민감정보수집 및 이용동의에 대한 동의에 체크해 주세요."
+//            alertMessage = "민감정보수집 및 이용동의에 대한 동의에 체크해 주세요."
+            
+            if naviLabel.text == "ko" {
+                alertMessage = "민감정보수집 및 이용동의에 대한 동의에 체크해 주세요."
+            }
+            if naviLabel.text == "en" {
+                alertMessage = "Please check the consent to collection and use of sensitive information."
+            }
+            
         }
         else if !agreeView4.isAgree {
-            alertMessage = "연구데이터 이용동의에 대한 동의에 체크해 주세요."
+//            alertMessage = "연구데이터 이용동의에 대한 동의에 체크해 주세요."
+            if naviLabel.text == "ko" {
+                alertMessage = "연구데이터 이용동의에 대한 동의에 체크해 주세요."
+            }
+            if naviLabel.text == "en" {
+                alertMessage = "Please check the consent to use research data."
+            }
         }
         else if pwView.textFieldView.textField.text != pwView2.textFieldView.textField.text {
-            alertMessage = "비밀번호를 다시한번 확인해주세요."
+//            alertMessage = "비밀번호를 다시한번 확인해주세요."
+            
+            
+            if naviLabel.text == "ko" {
+                alertMessage = "비밀번호를 다시한번 확인해주세요."
+            }
+            if naviLabel.text == "en" {
+                alertMessage = "Please check your password again."
+            }
+            
         }
         
         if alertMessage != "" {

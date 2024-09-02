@@ -11,6 +11,7 @@ import UIKit
 class ResultShowViewController1: UIViewController {
     
     var naviBar : UIView!
+    var naviLabel : UILabel!
     var backButton : ImageButton!
     
     var index = 0
@@ -28,7 +29,7 @@ class ResultShowViewController1: UIViewController {
     
     
     var la: UILabel!
-    var naviLabel: UILabel!
+    
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -66,6 +67,13 @@ class ResultShowViewController1: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+        naviLabel = UILabel(frame: CGRect(x: 50, y: 20, width: 20, height: 20))
+        naviLabel.text = UserDefaults.standard.string(forKey: "la")
+        naviLabel.textColor = .white
+        self.view.addSubview(naviLabel)
+        naviLabel.isHidden = true
         
         print("result1")
         
@@ -175,7 +183,13 @@ class ResultShowViewController1: UIViewController {
         scoreBackView.addSubview(scoreBackView2)
         
         let scoreTitleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: scoreBackView2.frame.size.width, height: 40))
-        scoreTitleLabel.text = "점수"
+//        scoreTitleLabel.text = "점수"
+        if naviLabel.text == "ko" {
+            scoreTitleLabel.text = "점수"
+        }
+        if naviLabel.text == "en" {
+            scoreTitleLabel.text = "score"
+        }
         scoreTitleLabel.textAlignment = .center
         scoreTitleLabel.font = UIFont(name: Nanum_Barun_Gothic_OTF, size: 20)
         scoreTitleLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -318,7 +332,7 @@ class ResultShowViewController1: UIViewController {
             toolComponentViews[3].selectButtons[0].setTitle(bundle?.localizedString(forKey: "3컵 이상" , value: nil, table: nil), for: .normal)
             toolComponentViews[3].selectButtons[1].setTitle(bundle?.localizedString(forKey: "2컵 이하" , value: nil, table: nil), for: .normal)
             
-            toolComponentViews[4].titleLabel.text = bundle?.localizedString(forKey: "말씀 드리는 대로 해 보십시오.\n\"오른손으로 받는다\"\n\n(지시를 끝낸 후에 종이를 건내 준다.\n지시를 반복하거나 옆에서 도와주면 안 됨", value: nil, table: nil)
+            toolComponentViews[4].titleLabel.text = bundle?.localizedString(forKey: "말씀 드리는 대로 해 보십시오.\n\'오른손으로 받는다\'\n\n(지시를 끝낸 후에 종이를 건내 준다.\n지시를 반복하거나 옆에서 도와주면 안 됨)", value: nil, table: nil)
             toolComponentViews[4].selectButtons[0].setTitle(bundle?.localizedString(forKey: "맞음" , value: nil, table: nil), for: .normal)
             toolComponentViews[4].selectButtons[1].setTitle(bundle?.localizedString(forKey: "틀림" , value: nil, table: nil), for: .normal)
             

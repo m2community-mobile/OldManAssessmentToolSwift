@@ -22,6 +22,8 @@ class ResultViewController1: UIViewController {
     var values = [String]()
     var buttons = [String]()
     
+    var naviLabel : UILabel!
+    
     var clinicalResearchInputView : ClinicalResearchInputView?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -33,6 +35,13 @@ class ResultViewController1: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        naviLabel = UILabel(frame: CGRect(x: 50, y: 20, width: 20, height: 20))
+        naviLabel.text = UserDefaults.standard.string(forKey: "la")
+        naviLabel.textColor = .white
+        naviBar.addSubview(naviLabel)
+        naviLabel.isHidden = true
+        
         self.view.backgroundColor = #colorLiteral(red: 0.8793651462, green: 0.8945010304, blue: 0.9114277959, alpha: 1)
         
         let bgImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: SCREEN.WIDTH, height: SCREEN.HEIGHT))
@@ -89,7 +98,14 @@ class ResultViewController1: UIViewController {
         scoreBackView.addSubview(scoreBackView2)
         
         let scoreTitleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: scoreBackView2.frame.size.width, height: 40))
-        scoreTitleLabel.text = "점수"
+        
+        if naviLabel.text == "ko" {
+            scoreTitleLabel.text = "점수"
+        }
+        if naviLabel.text == "en" {
+            scoreTitleLabel.text = "score"
+        }
+//        scoreTitleLabel.text = "점수"
         scoreTitleLabel.textAlignment = .center
         scoreTitleLabel.font = UIFont(name: Nanum_Barun_Gothic_OTF, size: 20)
         scoreTitleLabel.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)

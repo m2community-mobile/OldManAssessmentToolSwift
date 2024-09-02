@@ -137,10 +137,23 @@ class NotiCenter: NSObject, UNUserNotificationCenterDelegate, MessagingDelegate 
         if response.notification.request.trigger!.isKind(of: UNCalendarNotificationTrigger.self ){
             let alertCon = UIAlertController(title: response.notification.request.content.title, message: response.notification.request.content.body, preferredStyle: UIAlertController.Style.alert)
             alertCon.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: { (action) in
+                
+                
+                
                 appDel.allDismiss {
+                    
+                    
 //                    goURL(urlString: URL_KEY.mySchedule)
                 }
             }))
+            
+            
+            
+            
+            
+      
+            
+            
             alertCon.addAction(UIAlertAction(title: "닫기", style: UIAlertAction.Style.default, handler: { (action) in }))
             
             appDel.topVC?.present(alertCon, animated: true, completion: { })

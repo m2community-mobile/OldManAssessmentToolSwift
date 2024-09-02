@@ -20,19 +20,49 @@ extension AppDelegate {
         }
     }
     
-    func showAlert(title : String?, message : String?, actions:[UIAlertAction] = [UIAlertAction(title: "확인", style: .cancel, handler: nil)], complete:(()->Void)? = nil){
-        self.alertCon?.dismiss(animated: false, completion: {})
+    
+    
+    
+    
+    
+//    func showAlert(title : String?, message : String?, actions:[UIAlertAction] = [UIAlertAction(title: "확인", style: .cancel, handler: nil)], complete:(()->Void)? = nil){
+//        self.alertCon?.dismiss(animated: false, completion: {})
+//        self.alertCon = UIAlertController(title: title, message: message, preferredStyle: .alert)
+//        for action in actions {
+//            self.alertCon?.addAction(action)
+//        }
+//        
+//        DispatchQueue.main.async {
+//            appDel.topVC?.present(self.alertCon!, animated: true, completion: {
+//                complete?() //?/
+//            })
+//        }
+//        
+//    }
+    
+    func showAlert(title: String?, message: String?, actions: [UIAlertAction]? = nil, complete: (() -> Void)? = nil) {
+        // Dismiss any existing alert
+        self.alertCon?.dismiss(animated: false, completion: nil)
+        
+        // Create a new alert controller
         self.alertCon = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        for action in actions {
+        
+        // Use default action if actions are nil
+        let defaultActionTitle = NSLocalizedString("OK", comment: "Default confirmation button title")
+        let defaultAction = UIAlertAction(title: defaultActionTitle, style: .cancel, handler: nil)
+        let actionsToAdd = actions ?? [defaultAction]
+        
+        // Add actions to alert controller
+        for action in actionsToAdd {
             self.alertCon?.addAction(action)
         }
         
+        // Present the alert controller
         DispatchQueue.main.async {
             appDel.topVC?.present(self.alertCon!, animated: true, completion: {
-                complete?() //?/
+                complete?()
             })
         }
-        
     }
 }
 
