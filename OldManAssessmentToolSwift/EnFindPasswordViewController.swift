@@ -38,11 +38,12 @@ class EnFindPasswordViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         isSendSMSCertification = false
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.hidesBackButton = true
         self.titleLabel.text = "Find Password"
         
         backButton = ImageButton(frame: CGRect(x: 0, y: 0, width: naviBar.frame.size.height, height: naviBar.frame.size.height), image: UIImage(named: "btn_d_back2"), ratio: 1)
@@ -210,7 +211,11 @@ class EnFindPasswordViewController: BaseViewController {
         confirmButton.isHidden = true
         newPasswordBackView.isHidden = true
     }
-    
+//    override func viewWillAppear(_ animated: Bool) {
+//         super.viewWillAppear(animated)
+//         // 네비게이션 바 숨기기
+//         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+//     }
     
     @objc func womanClick(_ sender: UIButton) {
         let vc = FindPasswordViewController()

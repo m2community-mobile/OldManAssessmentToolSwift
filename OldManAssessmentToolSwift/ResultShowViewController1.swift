@@ -67,7 +67,7 @@ class ResultShowViewController1: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.navigationItem.hidesBackButton = true
         
         naviLabel = UILabel(frame: CGRect(x: 50, y: 20, width: 20, height: 20))
         naviLabel.text = UserDefaults.standard.string(forKey: "la")
@@ -223,7 +223,11 @@ class ResultShowViewController1: UIViewController {
         scrollView.contentSize.height = max(scrollView.frame.size.height, bottomView.frame.maxY + 20)
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+         // 네비게이션 바 숨기기
+         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         

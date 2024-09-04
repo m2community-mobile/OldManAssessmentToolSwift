@@ -17,7 +17,7 @@ class SelectedViewController: BaseViewController {
         super.viewDidLoad()
         
         print("here?")
-        
+        self.navigationItem.hidesBackButton = true
         
         self.view.backgroundColor = #colorLiteral(red: 0.1687407494, green: 0.1793107986, blue: 0.2257117033, alpha: 1)
         
@@ -127,7 +127,11 @@ class SelectedViewController: BaseViewController {
         
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+         // 네비게이션 바 숨기기
+         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+     }
     @objc func back(_ sender: UIButton) {
         
         let joinVC = LoginViewController()

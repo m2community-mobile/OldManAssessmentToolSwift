@@ -20,6 +20,7 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
         
         self.view.backgroundColor = UIColor.white
         
@@ -58,7 +59,11 @@ class BaseViewController: UIViewController {
         
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+         // 네비게이션 바 숨기기
+         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+     }
    
     
 }

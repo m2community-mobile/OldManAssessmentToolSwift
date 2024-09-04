@@ -93,7 +93,7 @@ class ResultShowViewController3: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.hidesBackButton = true
         print("result3")
         
         self.dataDicToValue(dataDic: self.dataDic)
@@ -216,7 +216,11 @@ class ResultShowViewController3: UIViewController {
         scrollView.contentSize.height = max(scrollView.frame.size.height, bottomView.frame.maxY)
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+         // 네비게이션 바 숨기기
+         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+     }
     /*
     // MARK: - Navigation
 

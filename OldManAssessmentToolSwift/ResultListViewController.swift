@@ -33,7 +33,7 @@ class ResultListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.navigationItem.hidesBackButton = true
         
         self.titleLabel.text = "결과보기"
         
@@ -65,12 +65,16 @@ class ResultListViewController: BaseViewController {
         
         self.dataUpdate()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+         // 네비게이션 바 숨기기
+         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+     }
     
     func dataUpdate(){
         
         self.dataArray = readToolData()
-        let urlString = "https://app.m2comm.co.kr/SNUH/get_result_list.php"
+        let urlString = "http://app.m2comm.co.kr/SNUH/get_result_list.php"
         
         let para = [
             "user_sid":user_sid,
@@ -454,9 +458,9 @@ class ResultListViewController: BaseViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//    }
     
 }
 

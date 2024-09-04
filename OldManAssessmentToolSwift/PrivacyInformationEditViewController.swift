@@ -14,7 +14,7 @@ class PrivacyInformationEditViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.hidesBackButton = true
         self.titleLabel.text = "개인정보수정"
 
         //수정버튼
@@ -175,7 +175,11 @@ class PrivacyInformationEditViewController: BaseViewController {
         
 
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+         // 네비게이션 바 숨기기
+         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

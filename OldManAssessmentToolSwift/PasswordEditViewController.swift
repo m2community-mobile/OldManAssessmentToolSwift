@@ -14,7 +14,7 @@ class PasswordEditViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.hidesBackButton = true
         self.titleLabel.text = "비밀번호 수정"
         
         //수정버튼
@@ -137,7 +137,11 @@ class PasswordEditViewController: BaseViewController {
         confirmButton.addTarget(self, action: #selector(confirmButtonPressed), for: .touchUpInside)
 
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+         // 네비게이션 바 숨기기
+         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

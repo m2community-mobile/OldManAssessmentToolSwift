@@ -36,11 +36,12 @@ class FindPasswordViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         isSendSMSCertification = false
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.hidesBackButton = true
         self.titleLabel.text = "비밀번호 찾기"
         
         naviLabel = UILabel(frame: CGRect(x: 50, y: 20, width: 20, height: 20))
@@ -202,7 +203,11 @@ class FindPasswordViewController: BaseViewController {
         newPasswordBackView.isHidden = true
     }
     
-    
+//    override func viewWillAppear(_ animated: Bool) {
+//         super.viewWillAppear(animated)
+//         // 네비게이션 바 숨기기
+//         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+//     }
     @objc func womanClick(_ sender: UIButton) {
         
         

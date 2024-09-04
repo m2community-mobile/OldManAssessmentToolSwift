@@ -38,7 +38,7 @@ class ResultViewController2: UIViewController {
         naviLabel = UILabel(frame: CGRect(x: 50, y: 20, width: 20, height: 20))
         naviLabel.text = UserDefaults.standard.string(forKey: "la")
         naviLabel.textColor = .white
-        naviBar.addSubview(naviLabel)
+//        naviBar.addSubview(naviLabel)
         naviLabel.isHidden = true
         
         self.view.backgroundColor = #colorLiteral(red: 0.8793651462, green: 0.8945010304, blue: 0.9114277959, alpha: 1)
@@ -53,7 +53,7 @@ class ResultViewController2: UIViewController {
         
         naviBar = UIView(frame: CGRect(x: 0, y: statusBar.frame.maxY, width: SCREEN.WIDTH, height: NAVIGATION_BAR_HEIGHT))
         self.view.addSubview(naviBar)
-        
+        naviBar.addSubview(naviLabel)
         
         backButton = ImageButton(frame: CGRect(x: 0, y: 0, width: naviBar.frame.size.height, height: naviBar.frame.size.height), image: UIImage(named: "btn_d_back2"), ratio: 1)
         backButton.addTarget(event: .touchUpInside) { (button) in

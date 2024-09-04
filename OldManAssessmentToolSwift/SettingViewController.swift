@@ -23,7 +23,7 @@ class SettingViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.hidesBackButton = true
         self.titleLabel.text = "Setting"
         titleLabel.font = UIFont(name: NanumSquareB, size: 20)
         if IS_IPHONE_SE {
@@ -94,7 +94,11 @@ class SettingViewController: BaseViewController {
 
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+         // 네비게이션 바 숨기기
+         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -195,7 +199,7 @@ class SettingViewController: BaseViewController {
     "Change your password",
     "Result",
     "Language",
-    "Withdraw Membership"
+    "Membership Withdrawal"
     ]
     
 }
@@ -343,9 +347,14 @@ extension SettingViewController : UITableViewDelegate, UITableViewDataSource {
         }
      
         if indexPath.row == 4 {
-            let nextVC = LoginViewController()
+            
+            let nextVC = DeletedInfoViewController()
             self.navigationController?.pushViewController(nextVC, animated: true)
             return
+            
+            
+            
+          
         }
         
     }

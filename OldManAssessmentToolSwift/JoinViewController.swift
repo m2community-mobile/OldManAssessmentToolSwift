@@ -18,7 +18,7 @@ class JoinViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.hidesBackButton = true
         naviLabel = UILabel(frame: CGRect(x: 50, y: 20, width: 20, height: 20))
         naviLabel.text = UserDefaults.standard.string(forKey: "la")
         naviLabel.textColor = .white
@@ -308,7 +308,11 @@ class JoinViewController: BaseViewController {
         
         
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+         // 네비게이션 바 숨기기
+         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+     }
     @objc func back() {
         dismiss(animated: false)
     }

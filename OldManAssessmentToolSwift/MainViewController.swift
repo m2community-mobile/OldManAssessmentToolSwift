@@ -27,11 +27,16 @@ class MainViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.hidesBackButton = true
+        print("USER_ID:\(UserDefaults.standard.value(forKey: "USER_ID"))")
+        
+        
         if var viewControllers = self.navigationController?.viewControllers {
             while viewControllers.first != self {
                 viewControllers.removeFirst()
@@ -148,12 +153,21 @@ class MainViewController: UIViewController {
         }
 
     }
-    
+//    override func viewWillAppear(_ animated: Bool) {
+//         super.viewWillAppear(animated)
+//         // 네비게이션 바 숨기기
+//         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+//     }
     
     
     
     override func viewDidAppear(_ animated: Bool) {
+        
         super.viewDidAppear(animated)
+        
+        
+        
+        
         
         NotificationCenter.default.addObserver(self, selector: #selector(la(_ :)), name: Notification.Name("ko"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(la(_ :)), name: Notification.Name("en"), object: nil)

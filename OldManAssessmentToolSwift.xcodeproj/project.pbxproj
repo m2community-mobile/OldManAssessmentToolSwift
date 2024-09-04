@@ -14,7 +14,13 @@
 		588FB3FB2C046A7400CB2C0E /* SelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5885CF942B96F3FC008A291C /* SelectedViewController.swift */; };
 		588FB3FC2C046A8800CB2C0E /* EnFindPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C9A3AF2B9AA4A700EB105B /* EnFindPasswordViewController.swift */; };
 		589A49492B74A1C1003B4D74 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 589A49482B74A1C1003B4D74 /* Alamofire */; };
+		58AC46072C86A677001BC50E /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC46062C86A677001BC50E /* CustomAlertViewController.swift */; };
+		58AC46092C86A774001BC50E /* CustomAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58AC46082C86A774001BC50E /* CustomAlertViewController.storyboard */; };
+		58AC460A2C86F322001BC50E /* DeletedInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DAFF142C85AA8A004050CF /* DeletedInfoViewController.swift */; };
+		58AC460B2C86F336001BC50E /* CustomAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58AC46082C86A774001BC50E /* CustomAlertViewController.storyboard */; };
+		58AC460C2C86F338001BC50E /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AC46062C86A677001BC50E /* CustomAlertViewController.swift */; };
 		58C9A3B02B9AA4A700EB105B /* EnFindPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C9A3AF2B9AA4A700EB105B /* EnFindPasswordViewController.swift */; };
+		58DAFF152C85AA8A004050CF /* DeletedInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DAFF142C85AA8A004050CF /* DeletedInfoViewController.swift */; };
 		6EE07EB480A3B3946642D32F /* Pods_OldManAssessmentToolSwift_Enter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDEA970F467C9BFAD9651F1 /* Pods_OldManAssessmentToolSwift_Enter.framework */; };
 		781058AE238BB95B00ED32AB /* PrivacyInformationEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781058AD238BB95B00ED32AB /* PrivacyInformationEditViewController.swift */; };
 		781058B0238BBFE700ED32AB /* PasswordEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781058AF238BBFE700ED32AB /* PasswordEditViewController.swift */; };
@@ -184,7 +190,10 @@
 		5885CF942B96F3FC008A291C /* SelectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewController.swift; sourceTree = "<group>"; };
 		5885CF9E2B9700AD008A291C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5885CFA02B9700DD008A291C /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		58AC46062C86A677001BC50E /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
+		58AC46082C86A774001BC50E /* CustomAlertViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomAlertViewController.storyboard; sourceTree = "<group>"; };
 		58C9A3AF2B9AA4A700EB105B /* EnFindPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnFindPasswordViewController.swift; sourceTree = "<group>"; };
+		58DAFF142C85AA8A004050CF /* DeletedInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletedInfoViewController.swift; sourceTree = "<group>"; };
 		781058AD238BB95B00ED32AB /* PrivacyInformationEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyInformationEditViewController.swift; sourceTree = "<group>"; };
 		781058AF238BBFE700ED32AB /* PasswordEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordEditViewController.swift; sourceTree = "<group>"; };
 		781058B3238BC25300ED32AB /* ToolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolViewController.swift; sourceTree = "<group>"; };
@@ -391,6 +400,9 @@
 				7896F362238674DC00C3C77C /* MainViewController.swift */,
 				7876D47923910965009B47C1 /* AboutTool.swift */,
 				781058B3238BC25300ED32AB /* ToolViewController.swift */,
+				58AC46062C86A677001BC50E /* CustomAlertViewController.swift */,
+				58DAFF142C85AA8A004050CF /* DeletedInfoViewController.swift */,
+				58AC46082C86A774001BC50E /* CustomAlertViewController.storyboard */,
 				786198A6238F988E00924FFC /* Result */,
 				781058B5238BC33B00ED32AB /* ResultListViewController.swift */,
 				7876D47323910891009B47C1 /* ResultShowViewController1.swift */,
@@ -695,6 +707,7 @@
 				788765282394C5E0001B172B /* NanumSquareBold.ttf in Resources */,
 				788765292394C5E0001B172B /* NanumSquareRoundL.ttf in Resources */,
 				7887652A2394C5E0001B172B /* btn_o.png in Resources */,
+				58AC460B2C86F336001BC50E /* CustomAlertViewController.storyboard in Resources */,
 				7887652B2394C5E0001B172B /* btn.png in Resources */,
 				7887652C2394C5E0001B172B /* NanumBarunGothic.otf in Resources */,
 				7887652D2394C5E0001B172B /* btn_x2.png in Resources */,
@@ -729,6 +742,7 @@
 				7896F2BC238674DC00C3C77C /* btn.png in Resources */,
 				7896F2F9238674DC00C3C77C /* NanumBarunGothic.otf in Resources */,
 				7896F2BA238674DC00C3C77C /* btn_x2.png in Resources */,
+				58AC46092C86A774001BC50E /* CustomAlertViewController.storyboard in Resources */,
 				5885CF9C2B9700AD008A291C /* Localizable.strings in Resources */,
 				7896F3812386789600C3C77C /* NanumSquareExtraBold.ttf in Resources */,
 				7896F373238674DD00C3C77C /* LaunchScreen.storyboard in Resources */,
@@ -843,6 +857,7 @@
 				788764ED2394C5E0001B172B /* LoginViewController.swift in Sources */,
 				788764EE2394C5E0001B172B /* SettingViewController.swift in Sources */,
 				788764EF2394C5E0001B172B /* BaseViewController.swift in Sources */,
+				58AC460C2C86F338001BC50E /* CustomAlertViewController.swift in Sources */,
 				788764F02394C5E0001B172B /* AboutResult.swift in Sources */,
 				788764F12394C5E0001B172B /* ResultShowViewController1.swift in Sources */,
 				788764F22394C5E0001B172B /* ShowPDF.swift in Sources */,
@@ -875,6 +890,7 @@
 				588FB3FB2C046A7400CB2C0E /* SelectedViewController.swift in Sources */,
 				7887650D2394C5E0001B172B /* VersionCheck.swift in Sources */,
 				7887650E2394C5E0001B172B /* PDFKPageContentView.m in Sources */,
+				58AC460A2C86F322001BC50E /* DeletedInfoViewController.swift in Sources */,
 				7887650F2394C5E0001B172B /* AdViewSmooth.swift in Sources */,
 				788765102394C5E0001B172B /* BottomView.swift in Sources */,
 				788765112394C5E0001B172B /* CGPDFDocument.m in Sources */,
@@ -909,6 +925,7 @@
 				7896F37B2386763600C3C77C /* LoginViewController.swift in Sources */,
 				78A4D71D238BB38F00D11FDA /* SettingViewController.swift in Sources */,
 				78DD2D0B23879DD700925FCC /* BaseViewController.swift in Sources */,
+				58AC46072C86A677001BC50E /* CustomAlertViewController.swift in Sources */,
 				7876D4722390E788009B47C1 /* AboutResult.swift in Sources */,
 				7876D47423910891009B47C1 /* ResultShowViewController1.swift in Sources */,
 				7896F348238674DC00C3C77C /* ShowPDF.swift in Sources */,
@@ -941,6 +958,7 @@
 				7896F32F238674DC00C3C77C /* PDFKBasicPDFViewerSinglePageCollectionView.m in Sources */,
 				5885CF952B96F3FC008A291C /* SelectedViewController.swift in Sources */,
 				7896F311238674DC00C3C77C /* VersionCheck.swift in Sources */,
+				58DAFF152C85AA8A004050CF /* DeletedInfoViewController.swift in Sources */,
 				7896F323238674DC00C3C77C /* PDFKPageContentView.m in Sources */,
 				7896F2D7238674DC00C3C77C /* AdViewSmooth.swift in Sources */,
 				7896F308238674DC00C3C77C /* BottomView.swift in Sources */,
@@ -993,7 +1011,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0;
-				DEVELOPMENT_TEAM = 33N59Z3268;
+				DEVELOPMENT_TEAM = 85JQMF8YT8;
 				INFOPLIST_FILE = "OldManAssessmentToolSwift copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1001,7 +1019,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.OldManAssessmentToolBundle;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.OldManAssessmentToolBundleEnter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1015,7 +1033,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0;
-				DEVELOPMENT_TEAM = 33N59Z3268;
+				DEVELOPMENT_TEAM = 85JQMF8YT8;
 				INFOPLIST_FILE = "OldManAssessmentToolSwift copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1023,7 +1041,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.co.OldManAssessmentToolBundle;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.co.OldManAssessmentToolBundleEnter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

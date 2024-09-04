@@ -129,7 +129,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     }
                 }
             }
-            appDel.showAlert(title: "Notice", message: "로그인에 실패하였습니다.")
+//            appDel.showAlert(title: "Notice", message: "로그인에 실패하였습니다.")
             complete(false)
             self.loginTimer?.invalidate()
             return

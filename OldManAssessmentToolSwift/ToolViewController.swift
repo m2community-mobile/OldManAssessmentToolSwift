@@ -31,7 +31,7 @@ class ToolViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.hidesBackButton = true
         
         print("here??")
         
@@ -136,7 +136,11 @@ class ToolViewController: UIViewController {
     }
     
     
-    
+//    override func viewWillAppear(_ animated: Bool) {
+//         super.viewWillAppear(animated)
+//         // 네비게이션 바 숨기기
+//         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+//     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -414,6 +418,7 @@ class ToolViewController: UIViewController {
         if isReset {
             self.reset()
             self.scrollView.setContentOffset(CGPoint.zero, animated: false)
+            self.navigationController?.setNavigationBarHidden(true, animated: animated)
         }
         isReset = true
     }

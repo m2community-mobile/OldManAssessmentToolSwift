@@ -111,20 +111,54 @@ let IS_NORCH : Bool = {
     
 }()
 
-let IPHONE_SE : CGFloat     = 568 // 320 x 568 * 2 - 0.5633
-let IPHONE_N : CGFloat      = 667 // 375 x 667 * 2 - 0.5622
-let IPHONE_N_PLUS : CGFloat = 736 // 414 x 736 * 3 - 0.5625
+//let IPHONE_SE : CGFloat     = 568 // 320 x 568 * 2 - 0.5633
+//let IPHONE_N : CGFloat      = 667 // 375 x 667 * 2 - 0.5622
+//let IPHONE_N_PLUS : CGFloat = 736 // 414 x 736 * 3 - 0.5625
+//
+//let IPHONE_X : CGFloat      = 812 // 375 x 812 * 3 - 0.4618
+//let IPHONE_XR : CGFloat     = 896 // 414 x 896 * 2 - 0.4620
+//let IPHONE_MAX : CGFloat    = 896 // 414 x 896 * 3 - 0.4620
+//
+//let IS_IPHONE_SE     = (MY_IPHONE == IPHONE_SE)
+//let IS_IPHONE_N      = (MY_IPHONE == IPHONE_N)
+//let IS_IPHONE_N_PLUS = (MY_IPHONE == IPHONE_N_PLUS)
+//let IS_IPHONE_X      = (MY_IPHONE == IPHONE_X)
+//let IS_IPHONE_XR     = (MY_IPHONE == IPHONE_XR)
+//let IS_IPHONE_MAX    = (MY_IPHONE == IPHONE_MAX)
 
-let IPHONE_X : CGFloat      = 812 // 375 x 812 * 3 - 0.4618
-let IPHONE_XR : CGFloat     = 896 // 414 x 896 * 2 - 0.4620
-let IPHONE_MAX : CGFloat    = 896 // 414 x 896 * 3 - 0.4620
+let IPHONE_SE : CGFloat        = 568 // 320 x 568 * 2 - 0.5633
+let IPHONE_N : CGFloat         = 667 // 375 x 667 * 2 - 0.5622
+let IPHONE_N_PLUS : CGFloat    = 736 // 414 x 736 * 3 - 0.5625
 
-let IS_IPHONE_SE     = (MY_IPHONE == IPHONE_SE)
-let IS_IPHONE_N      = (MY_IPHONE == IPHONE_N)
-let IS_IPHONE_N_PLUS = (MY_IPHONE == IPHONE_N_PLUS)
-let IS_IPHONE_X      = (MY_IPHONE == IPHONE_X)
-let IS_IPHONE_XR     = (MY_IPHONE == IPHONE_XR)
-let IS_IPHONE_MAX    = (MY_IPHONE == IPHONE_MAX)
+let IPHONE_X : CGFloat         = 812 // 375 x 812 * 3 - 0.4618
+let IPHONE_XR : CGFloat        = 896 // 414 x 896 * 2 - 0.4620
+
+
+let IPHONE_MINI : CGFloat      = 812 // 375 x 812 * 3 - 0.4618
+
+let IPHONE_MAX : CGFloat       = 896 // 414 x 896 * 3 - 0.4620
+let IPHONE_12PRO : CGFloat     = 844 // 390 x 844 * 3 - 0.4620
+let IPHONE_15PRO : CGFloat     = 852 // 393 x 852 * 3 - 0.4620
+let IPHONE_12PRO_MAX : CGFloat = 926 // 428 x 926 * 3 - 0.4622
+
+
+let IPHONE_15PRO_MAX : CGFloat = 932 // 430 x 932 * 3 - 0.4622
+
+
+let IS_IPHONE_SE               = (MY_IPHONE == IPHONE_SE)
+let IS_IPHONE_N                = (MY_IPHONE == IPHONE_N)
+let IS_IPHONE_N_PLUS           = (MY_IPHONE == IPHONE_N_PLUS)
+let IS_IPHONE_X                = (MY_IPHONE == IPHONE_X)
+let IS_IPHONE_XR               = (MY_IPHONE == IPHONE_XR)
+let IS_IPHONE_MINI             = (MY_IPHONE == IPHONE_MINI)
+
+
+let IS_IPHONE_MAX              = (MY_IPHONE == IPHONE_MAX)
+let IS_IPHONE_12PRO            = (MY_IPHONE == IPHONE_12PRO)
+let IS_IPHONE_15PRO            = (MY_IPHONE == IPHONE_15PRO)
+let IS_IPHONE_12PRO_MAX        = (MY_IPHONE == IPHONE_12PRO_MAX)
+ 
+let IS_IPHONE_15PRO_MAX        = (MY_IPHONE == IPHONE_15PRO_MAX)
 
 //let IS_IPHONE_NOTCH  = (MY_IPHONE >= IPHONE_X && MY_IPHONE <= IPHONE_MAX)
 var IS_IPHONE_NOTCH : Bool { get{ return (min(SCREEN.WIDTH, SCREEN.HEIGHT) / max(SCREEN.WIDTH, SCREEN.HEIGHT)) < 0.5 } }
